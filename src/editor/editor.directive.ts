@@ -2,7 +2,7 @@ import { Directive, ElementRef, Renderer, Input, Output, Optional, EventEmitter,
 
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 
-declare var $: JQueryStatic;
+declare var jQuery: JQueryStatic;
 
 
 @Directive({
@@ -50,7 +50,7 @@ export class FroalaEditorDirective implements ControlValueAccessor {
     }
 
     // jquery wrap and store element
-    this._$element = (<any>$(element));
+    this._$element = (<any>jQuery(element));
   }
 
   // Begin ControlValueAccesor methods.
